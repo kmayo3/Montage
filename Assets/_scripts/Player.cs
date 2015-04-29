@@ -6,9 +6,14 @@ public class Player : MonoBehaviour {
     public float speed = 2f;
     public static SwordType activeSword;
 
+    public static float maxHealth = 10;
+    public static float currentHealth = 5;
+
+    public static float maxScrolls = 5;
+    public static float currentScrolls = 3;
+
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -41,7 +46,7 @@ public class Player : MonoBehaviour {
         }
 
         // randomly pick a sword
-        int rand = (int)Random.RandomRange(0f, 5f);
+        int rand = (int)Random.Range(0f, 5f);
 
         if (rand == 0)
         {

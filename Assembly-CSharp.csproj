@@ -50,6 +50,8 @@
      <Compile Include="Assets\_scripts\CamFollow.cs" />
      <Compile Include="Assets\_scripts\Player.cs" />
      <Compile Include="Assets\_scripts\SwordType.cs" />
+     <Compile Include="Assets\_scripts\healthBar.cs" />
+     <Compile Include="Assets\_scripts\scrollsBar.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
