@@ -71,4 +71,10 @@ public class Player : MonoBehaviour
             activeSword = SwordType.Grand;
         }
     }
+
+	void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "Enemy") {
+			currentHealth = currentHealth - 1;
+		}
+	}
 }
