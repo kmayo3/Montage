@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-
+public class Player : MonoBehaviour
+{
     public float speed = 2f;
     public static SwordType activeSword;
 
@@ -12,13 +12,15 @@ public class Player : MonoBehaviour {
     public static float maxScrolls = 5;
     public static float currentScrolls = 3;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+    // Use this for initialization
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         // movement controls
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -68,5 +70,5 @@ public class Player : MonoBehaviour {
         {
             activeSword = SwordType.Grand;
         }
-	}
+    }
 }

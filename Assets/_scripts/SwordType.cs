@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum SwordType{
+public enum SwordType
+{
     Neutral,
     Fire,
     Shadow,
     Energy,
-    Grand	
+    Grand
 }
