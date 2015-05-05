@@ -7,14 +7,34 @@ public class Player : MonoBehaviour
     public static SwordType activeSword;
 
     public static float maxHealth = 10;
-    public static float currentHealth = 5;
+    public static float currentHealth = 10;
 
     public static float maxScrolls = 5;
-    public static float currentScrolls = 3;
+    public static float currentScrolls = 0;
+
+    public bool isInvuln = true;
+    public int invulnFrames = 50;
+    public int invulnRemaining = 50;
 
     // Use this for initialization
     void Start()
     {
+    }
+
+    void FixedUpdate()
+    {
+        if (isInvuln)
+        {
+            if (invulnRemaining <= 0)
+            {
+                isInvuln = false;
+            }
+            else
+            {
+                invulnRemaining--;
+            }
+            Blink();
+        }
     }
 
     // Update is called once per frame
@@ -71,4 +91,24 @@ public class Player : MonoBehaviour
             activeSword = SwordType.Grand;
         }
     }
+
+    void Blink()
+    {
+        if (invulnRemaining % 3 == 0)
+        {
+            SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
+            sprite.color = Color.red;
+        }
+        else
+        {
+            SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
+            sprite.color = Color.white;
+        }
+
+        if (invulnRemaining <= 0)
+            {
+                SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
+                sprite.color = Color.white;
+            }
+        }
 }
