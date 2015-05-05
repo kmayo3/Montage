@@ -12,7 +12,7 @@ Platform assembly: C:\Users\Katlyn\Documents\GitHub\Montage\build0_Data\Managed\
 Loading C:\Users\Katlyn\Documents\GitHub\Montage\build0_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Katlyn\Documents\GitHub\Montage\build0_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Katlyn\Documents\GitHub\Montage\build0_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.042 seconds
+- Completed reload, in  0.148 seconds
 desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
