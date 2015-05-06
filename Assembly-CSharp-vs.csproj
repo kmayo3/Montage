@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_scripts\ActiveSword.cs" />
+     <Compile Include="Assets\_scripts\BackButton.cs" />
      <Compile Include="Assets\_scripts\CamFollow.cs" />
      <Compile Include="Assets\_scripts\HurtPlayer.cs" />
      <Compile Include="Assets\_scripts\Menu.cs" />

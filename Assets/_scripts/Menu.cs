@@ -18,12 +18,12 @@ public class Menu : MonoBehaviour
         if(GUI.Button(new Rect(Screen.width*textPlacementX1, Screen.height * textPlacementY1,
             Screen.width * .5f, Screen.height * .1f), "PLAY GAME"))
         {
-            print("Clicked Play Game");
+            Application.LoadLevel("gameplay");
         }
         if (GUI.Button(new Rect(Screen.width * textPlacementX2, Screen.height * textPlacementY2,
-            Screen.width * .5f, Screen.height * .1f), "PLAY GAME"))
+            Screen.width * .5f, Screen.height * .1f), "INSTRUCTIONS"))
         {
-            print("Clicked Options");
+            Application.LoadLevel("Instructions");
         }
     }
 }
