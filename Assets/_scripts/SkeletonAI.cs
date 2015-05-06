@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class SkeletonAI : MonoBehaviour {
-	public Transform target;
-	public int moveSpeed;
+	public float speed = 1f;
 	public int rotationSpeed;
 
 	public static float maxHealth = 2;
@@ -16,10 +15,10 @@ public class SkeletonAI : MonoBehaviour {
 	
 	void Update() 
 	{    
-		target = GameObject.FindGameObjectWithTag("Player").transform;
+		Vector3 target = GameObject.FindGameObjectWithTag("Player").transform.position;
 		if (target != null) {
-			if (Vector3.Distance (transform.position, target.position) < 5) {
-				Vector3 dir = target.position - transform.position;
+			if (Vector3.Distance (this.transform.position, target) < 5) {
+				Vector3 dir = target - this.transform.position;
 				// Only needed if objects don't share 'z' value.
 				dir.z = 0.0f;
 				if (dir != Vector3.zero) 
@@ -28,8 +27,8 @@ public class SkeletonAI : MonoBehaviour {
 				//                                   rotationSpeed * Time.deltaTime);
 				
 				//Move Towards Target
-					transform.position += (target.position - transform.position).normalized 
-						* moveSpeed * Time.deltaTime;
+					this.transform.position += (target - this.transform.position).normalized 
+						* speed * Time.deltaTime;
 			}
 		}
 		
