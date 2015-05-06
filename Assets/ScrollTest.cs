@@ -18,7 +18,7 @@ public class ScrollTest : MonoBehaviour {
 
 	void OnGUI()
 	{
-		if (hasCollided ==true)
+		if (hasCollided == true)
 		{   
 			//adjust text screen width and height here
 			//(Screen.width - width of box)/2, (Screen.height - height of box)/2, Width, Height
@@ -26,9 +26,9 @@ public class ScrollTest : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerEnter2D(Collider2D c)
+	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if(c.gameObject.tag == "Player") 
+		if(collider.gameObject.tag == "Player") 
 			
 		{
 			hasCollided = true;
@@ -38,9 +38,9 @@ public class ScrollTest : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerExit2D(Collider2D other ){
-
+	void OnTriggerExit2D(Collider2D collider)
+    {
 		hasCollided = false;
-		
+        Destroy(this.gameObject);
 	}
 }

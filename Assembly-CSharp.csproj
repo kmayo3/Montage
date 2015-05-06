@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\OpenScroll.cs" />
      <Compile Include="Assets\ScrollTest.cs" />
      <Compile Include="Assets\SkeletonAI.cs" />
      <Compile Include="Assets\_scripts\ActiveSword.cs" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\_scripts\SwordType.cs" />
      <Compile Include="Assets\_scripts\healthBar.cs" />
      <Compile Include="Assets\_scripts\scrollsBar.cs" />
+     <Compile Include="Assets\lavaScroll.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
