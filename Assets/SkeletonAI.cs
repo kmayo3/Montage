@@ -5,6 +5,9 @@ public class SkeletonAI : MonoBehaviour {
 	public Transform target;
 	public int moveSpeed;
 	public int rotationSpeed;
+
+	public static float maxHealth = 2;
+	public static float currentHealth = 2;
 	
 	void Start() 
 	{
@@ -14,19 +17,20 @@ public class SkeletonAI : MonoBehaviour {
 	void Update() 
 	{    
 		target = GameObject.FindGameObjectWithTag("Player").transform;
-		if (target != null) 
-		{
-			Vector3 dir = target.position - transform.position;
-			// Only needed if objects don't share 'z' value.
-			dir.z = 0.0f;
-			if (dir != Vector3.zero) 
+		if (target != null) {
+			if (Vector3.Distance (transform.position, target.position) < 5) {
+				Vector3 dir = target.position - transform.position;
+				// Only needed if objects don't share 'z' value.
+				dir.z = 0.0f;
+				if (dir != Vector3.zero) 
 				//transform.rotation = Quaternion.Slerp ( transform.rotation, 
 				//                                     Quaternion.FromToRotation (Vector3.right, dir), 
 				//                                   rotationSpeed * Time.deltaTime);
 				
 				//Move Towards Target
-				transform.position += (target.position - transform.position).normalized 
-					* moveSpeed * Time.deltaTime;
+					transform.position += (target.position - transform.position).normalized 
+						* moveSpeed * Time.deltaTime;
+			}
 		}
 		
 		GetComponent<Rigidbody2D>().velocity = Vector3.zero;
