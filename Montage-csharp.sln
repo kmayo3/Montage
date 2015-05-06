@@ -17,6 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																				GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																		GlobalSection(MonoDevelopProperties) = preSolution
@@ -25,7 +26,11 @@ Global
 																																				GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 114af07ae61afaef25fff46a5c257c7dce20c4b2
 =======
-																																				GlobalSection(MonoDevelopProperties) = preSolution
+<<<<<<< HEAD
+																																		GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of bbfdefe... I Added ninja characters
+=======
+																																					GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 =======
 																																GlobalSection(MonoDevelopProperties) = preSolution
