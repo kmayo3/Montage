@@ -94,7 +94,9 @@ public class Player : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Enemy") {
-			currentHealth = currentHealth - 1;
+			currentHealth--;
+            isInvuln = true;
+            invulnRemaining = invulnFrames;
 		}
 	}
 
