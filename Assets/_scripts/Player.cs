@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -12,13 +13,19 @@ public class Player : MonoBehaviour
     public static float maxScrolls = 5;
     public static float currentScrolls = 0;
 
-    public bool isInvuln = true;
-    public int invulnFrames = 50;
-    public int invulnRemaining = 50;
+    public bool isInvuln = false;
+    public int invulnFrames = 75;
+    public int invulnRemaining = 0;
+
+    public Sprite down_face;
+    public Sprite left_face;
+    public Sprite right_face;
+    public Sprite up_face;
 
     // Use this for initialization
     void Start()
     {
+        
     }
 
     void FixedUpdate()
@@ -40,6 +47,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Image image = this.GetComponent<Image>();
 
         // movement controls
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -47,57 +55,66 @@ public class Player : MonoBehaviour
             Vector3 position = this.transform.position;
             position.x -= speed * Time.deltaTime;
             this.transform.position = position;
+            image.sprite = left_face;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Vector3 position = this.transform.position;
             position.y -= speed * Time.deltaTime;
             this.transform.position = position;
+            image.sprite = down_face;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             Vector3 position = this.transform.position;
             position.x += speed * Time.deltaTime;
             this.transform.position = position;
+            image.sprite = right_face;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Vector3 position = this.transform.position;
             position.y += speed * Time.deltaTime;
             this.transform.position = position;
-        }
-
-        // randomly pick a sword
-        int rand = (int)Random.Range(0f, 5f);
-
-        if (rand == 0)
-        {
-            activeSword = SwordType.Neutral;
-        }
-        else if (rand == 1)
-        {
-            activeSword = SwordType.Fire;
-        }
-        else if (rand == 2)
-        {
-            activeSword = SwordType.Shadow;
-        }
-        else if (rand == 3)
-        {
-            activeSword = SwordType.Energy;
-        }
-        else if (rand == 4)
-        {
-            activeSword = SwordType.Grand;
+            image.sprite = up_face;
         }
     }
 
-	void OnCollisionEnter2D(Collision2D other){
+	void OnCollisionEnter2D(Collision2D other)
+    {
+        // check enemy collision
 		if (other.gameObject.tag == "Enemy") {
 			currentHealth--;
             isInvuln = true;
             invulnRemaining = invulnFrames;
 		}
+
+        // check sword collisions
+        if (other.gameObject.tag == "NeutralSword")
+        {
+            activeSword = SwordType.Neutral;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "FireSword")
+        {
+            activeSword = SwordType.Fire;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "ShadowSword")
+        {
+            activeSword = SwordType.Shadow;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "EnergySword")
+        {
+            activeSword = SwordType.Energy;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "GrandSword")
+        {
+            activeSword = SwordType.Grand;
+            Destroy(other.gameObject);
+        }
 	}
 
     void Blink()

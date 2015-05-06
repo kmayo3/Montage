@@ -37,15 +37,19 @@ public class ActiveSword : MonoBehaviour {
         }
         else if (activeSword == SwordType.Energy)
         {
-            image.sprite = sprite2;
+            image.sprite = sprite3;
         }
         else if (activeSword == SwordType.Shadow)
         {
-            image.sprite = sprite3;
+            image.sprite = sprite2;
         }
         else if (activeSword == SwordType.Grand)
         {
             image.sprite = sprite4;
+        }
+        else
+        {
+            image.sprite = empty;
         }
 	}
 }

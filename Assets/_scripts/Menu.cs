@@ -7,9 +7,11 @@ public class Menu : MonoBehaviour
 
     public float textPlacementY1;
     public float textPlacementY2;
+    public float textPlacementY3;
 
     public float textPlacementX1;
     public float textPlacementX2;
+    public float textPlacementX3;
 
     void OnGUI()
     {
@@ -24,6 +26,11 @@ public class Menu : MonoBehaviour
             Screen.width * .5f, Screen.height * .1f), "INSTRUCTIONS"))
         {
             Application.LoadLevel("Instructions");
+        }
+        if (GUI.Button(new Rect(Screen.width * textPlacementX3, Screen.height * textPlacementY3,
+            Screen.width * .5f, Screen.height * .1f), "QUIT"))
+        {
+            Application.Quit();
         }
     }
 }
