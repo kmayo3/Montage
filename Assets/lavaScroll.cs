@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OpenScroll : MonoBehaviour 
+public class lavaScroll : MonoBehaviour
 {
     public GUIText referencetotext;
-    public bool hasCollided = false;
-    public string labelText = "";
+    public bool collides = false;
+    public string text = "";
 
     void OnGUI()
     {
-        if (hasCollided == true)
+        if (collides == true)
         {
             //adjust text screen width and height here
             //(Screen.width - width of box)/2, (Screen.height - height of box)/2, Width, Height
-            GUI.Box(new Rect((Screen.width - 500f) / 2f, (Screen.height - 500) / 2f, 500f, 500f), (labelText));
+            GUI.Box(new Rect((Screen.width - 500f) / 2f, (Screen.height - 500) / 2f, 500f, 500f), (text));
         }
     }
 
@@ -21,16 +21,16 @@ public class OpenScroll : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            hasCollided = true;
+            collides = true;
             //adjust text here
-            labelText = "Scroll Instructions Here \n Use new line character to create new lines";
+            text = "Scroll Instructions Here \n Use new line character to create new lines";
 
         }
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        hasCollided = false;
+        collides = false;
         Destroy(this.gameObject);
         Player.currentScrolls += 1;
     }

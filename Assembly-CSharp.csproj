@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\OpenScroll.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\ScrollTest.cs" />
+     <Compile Include="Assets\SkeletonAI.cs" />
+>>>>>>> bbfdefebacc6dd1f140aba16d3fc1848be44b57f
      <Compile Include="Assets\_scripts\ActiveSword.cs" />
      <Compile Include="Assets\_scripts\CamFollow.cs" />
      <Compile Include="Assets\_scripts\Player.cs" />
@@ -54,6 +59,7 @@
      <Compile Include="Assets\_scripts\SwordType.cs" />
      <Compile Include="Assets\_scripts\healthBar.cs" />
      <Compile Include="Assets\_scripts\scrollsBar.cs" />
+     <Compile Include="Assets\lavaScroll.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

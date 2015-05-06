@@ -25,6 +25,9 @@ Global
 																																				GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 114af07ae61afaef25fff46a5c257c7dce20c4b2
 =======
+																																				GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> origin/master
+=======
 																																GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 		StartupItem = Assembly-CSharp.csproj
