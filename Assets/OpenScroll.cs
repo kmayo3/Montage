@@ -5,6 +5,7 @@ public class OpenScroll : MonoBehaviour
 {
     public GUIText referenceToText;
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -13,10 +14,5 @@ public class OpenScroll : MonoBehaviour
             Debug.Log("Why isnt this working????");
             Destroy(this.gameObject);
         }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        referenceToText.text = "";
     }
 }
