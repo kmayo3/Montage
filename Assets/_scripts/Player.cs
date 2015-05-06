@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public static float currentScrolls = 0;
 
     public bool isInvuln = true;
-    public int invulnFrames = 50;
+    public int invulnFrames = 75;
     public int invulnRemaining = 50;
 
     // Use this for initialization
@@ -66,39 +66,47 @@ public class Player : MonoBehaviour
             position.y += speed * Time.deltaTime;
             this.transform.position = position;
         }
-
-        // randomly pick a sword
-        int rand = (int)Random.Range(0f, 5f);
-
-        if (rand == 0)
-        {
-            activeSword = SwordType.Neutral;
-        }
-        else if (rand == 1)
-        {
-            activeSword = SwordType.Fire;
-        }
-        else if (rand == 2)
-        {
-            activeSword = SwordType.Shadow;
-        }
-        else if (rand == 3)
-        {
-            activeSword = SwordType.Energy;
-        }
-        else if (rand == 4)
-        {
-            activeSword = SwordType.Grand;
-        }
     }
 
-<<<<<<< HEAD
-	void OnCollisionEnter2D(Collision2D other){
+
+	void OnCollisionEnter2D(Collision2D other)
+    {
+        // check for an enemy collision
 		if (other.gameObject.tag == "Enemy") {
-			currentHealth = currentHealth - 1;
+			currentHealth--;
+            isInvuln = true;
+            invulnRemaining = invulnFrames;
 		}
+
+        // check for variou swords
+        if  (other.gameObject.tag == "NormalSword")
+        {
+            activeSword = SwordType.Neutral;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "FireSword")
+        {
+            activeSword = SwordType.Fire;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "ShadowSword")
+        {
+            activeSword = SwordType.Shadow;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "EnergySword")
+        {
+            activeSword = SwordType.Energy;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "MasterSword")
+        {
+            activeSword = SwordType.Grand;
+            Destroy(other.gameObject);
+        }
+
 	}
-=======
+
     void Blink()
     {
         if (invulnRemaining % 3 == 0)
@@ -118,5 +126,4 @@ public class Player : MonoBehaviour
                 sprite.color = Color.white;
             }
         }
->>>>>>> origin/master
 }
