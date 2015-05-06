@@ -105,16 +105,16 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-<<<<<<< HEAD
 	}
 
-=======
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Enemy") {
-			currentHealth = currentHealth - 1;
+			currentHealth--;
+            isInvuln = true;
+            invulnRemaining = invulnFrames;
 		}
 	}
->>>>>>> origin/master
+
     void Blink()
     {
         if (invulnRemaining % 3 == 0)

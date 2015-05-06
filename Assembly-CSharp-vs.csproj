@@ -46,11 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
      <Compile Include="Assets\OpenScroll.cs" />
-     <Compile Include="Assets\SkeletonAI.cs" />
->>>>>>> origin/master
      <Compile Include="Assets\_scripts\ActiveSword.cs" />
      <Compile Include="Assets\_scripts\CamFollow.cs" />
      <Compile Include="Assets\_scripts\Player.cs" />
