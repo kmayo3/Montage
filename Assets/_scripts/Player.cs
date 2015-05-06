@@ -92,13 +92,11 @@ public class Player : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Enemy") {
 			currentHealth = currentHealth - 1;
 		}
 	}
-=======
     void Blink()
     {
         if (invulnRemaining % 3 == 0)
@@ -118,5 +116,4 @@ public class Player : MonoBehaviour
                 sprite.color = Color.white;
             }
         }
->>>>>>> origin/master
 }
