@@ -49,11 +49,11 @@
      <Compile Include="Assets\_scripts\ActiveSword.cs" />
      <Compile Include="Assets\_scripts\CamFollow.cs" />
      <Compile Include="Assets\_scripts\HurtPlayer.cs" />
-     <Compile Include="Assets\_scripts\OpenScroll.cs" />
      <Compile Include="Assets\_scripts\Player.cs" />
      <Compile Include="Assets\_scripts\ScrollTest.cs" />
      <Compile Include="Assets\_scripts\SkeletonAI.cs" />
      <Compile Include="Assets\_scripts\SwordType.cs" />
+     <Compile Include="Assets\_scripts\flowerScript.cs" />
      <Compile Include="Assets\_scripts\healthBar.cs" />
      <Compile Include="Assets\_scripts\lavaScroll.cs" />
      <Compile Include="Assets\_scripts\scrollsBar.cs" />

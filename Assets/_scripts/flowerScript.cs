@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OpenScroll : MonoBehaviour 
+public class flowerScript : MonoBehaviour
 {
     public GUIText referencetotext;
     public bool hasCollided = false;
@@ -23,7 +23,7 @@ public class OpenScroll : MonoBehaviour
         {
             hasCollided = true;
             //adjust text here
-            labelText = "Scroll Instructions Here \n Use new line character to create new lines";
+            labelText = "Don't get too close to the fire... ";
 
         }
     }
